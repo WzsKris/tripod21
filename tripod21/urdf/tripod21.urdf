@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="tripod21">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0021719 -0.00067551 -0.0061119"
+        rpy="0 0 0" />
+      <mass
+        value="9.9015" />
+      <inertia
+        ixx="0.037705"
+        ixy="-0.0001872"
+        ixz="-2.4945E-07"
+        iyy="0.037938"
+        iyz="-3.2776E-07"
+        izz="0.055788" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tripod21/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tripod21/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="sec03">
+    <inertial>
+      <origin
+        xyz="-0.012348 -0.0025907 4.0643E-05"
+        rpy="0 0 0" />
+      <mass
+        value="1.3179" />
+      <inertia
+        ixx="0.0021718"
+        ixy="-0.00012177"
+        ixz="8.7446E-07"
+        iyy="0.0018233"
+        iyz="-5.0487E-07"
+        izz="0.0015672" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tripod21/meshes/sec03.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.84706 0.84706 0.84706 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tripod21/meshes/sec03.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg03"
+    type="revolute">
+    <origin
+      xyz="0.18848 -0.10882 -0.0010177"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="sec03" />
+    <axis
+      xyz="0.86603 -0.5 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+  <link
+    name="hsec03">
+    <inertial>
+      <origin
+        xyz="0.070589 0.04266 0.0012117"
+        rpy="0 0 0" />
+      <mass
+        value="3.8354" />
+      <inertia
+        ixx="0.0061603"
+        ixy="0.005322"
+        ixz="6.0231E-06"
+        iyy="0.012303"
+        iyz="5.4468E-06"
+        izz="0.012961" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tripod21/meshes/hsec03.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.84706 0.84706 0.84706 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tripod21/meshes/hsec03.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="high03"
+    type="revolute">
+    <origin
+      xyz="0.0234983773756974 -0.116912492688329 0"
+      rpy="0 0 0" />
+    <parent
+      link="sec03" />
+    <child
+      link="hsec03" />
+    <axis
+      xyz="-0.500000000000064 -0.866025403784402 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+  <link
+    name="lsec03">
+    <inertial>
+      <origin
+        xyz="0.069146 -0.031406 3.0477E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.2066" />
+      <inertia
+        ixx="0.00019169"
+        ixy="0.00024381"
+        ixz="-1.3142E-09"
+        iyy="0.00047321"
+        iyz="4.1003E-11"
+        izz="0.00058055" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tripod21/meshes/lsec03.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tripod21/meshes/lsec03.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="low03"
+    type="revolute">
+    <origin
+      xyz="0.28679317457298 -0.0425467741771713 0.00210000000000956"
+      rpy="0 0 0" />
+    <parent
+      link="hsec03" />
+    <child
+      link="lsec03" />
+    <axis
+      xyz="-0.500000000000064 -0.866025403784402 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+  <link
+    name="sec02">
+    <inertial>
+      <origin
+        xyz="0.012348 -0.0025907 -4.0643E-05"
+        rpy="0 0 0" />
+      <mass
+        value="1.3179" />
+      <inertia
+        ixx="0.0021718"
+        ixy="0.00012177"
+        ixz="8.7446E-07"
+        iyy="0.0018233"
+        iyz="5.0487E-07"
+        izz="0.0015672" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tripod21/meshes/sec02.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.84706 0.84706 0.84706 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tripod21/meshes/sec02.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg02"
+    type="revolute">
+    <origin
+      xyz="-0.18848 -0.10882 -0.0010177"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="sec02" />
+    <axis
+      xyz="-0.86603 -0.5 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+  <link
+    name="hsec02">
+    <inertial>
+      <origin
+        xyz="-0.070551 0.042629 -0.0012395"
+        rpy="0 0 0" />
+      <mass
+        value="3.8312" />
+      <inertia
+        ixx="0.0061602"
+        ixy="-0.005322"
+        ixz="6.0231E-06"
+        iyy="0.012303"
+        iyz="-5.4468E-06"
+        izz="0.012961" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tripod21/meshes/hsec02.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.84706 0.84706 0.84706 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tripod21/meshes/hsec02.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="high02"
+    type="revolute">
+    <origin
+      xyz="-0.0234983773757091 -0.116912492688327 0"
+      rpy="0 0 0" />
+    <parent
+      link="sec02" />
+    <child
+      link="hsec02" />
+    <axis
+      xyz="-0.499999999999978 0.866025403784452 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+  <link
+    name="lsec02">
+    <inertial>
+      <origin
+        xyz="-0.069146 -0.031406 -3.0447E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.2066" />
+      <inertia
+        ixx="0.00019169"
+        ixy="-0.00024381"
+        ixz="-1.3157E-09"
+        iyy="0.00047321"
+        iyz="-3.0532E-11"
+        izz="0.00058055" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tripod21/meshes/lsec02.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tripod21/meshes/lsec02.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="low02"
+    type="revolute">
+    <origin
+      xyz="-0.286793174572985 -0.042546774177143 -0.00210000000000781"
+      rpy="0 0 0" />
+    <parent
+      link="hsec02" />
+    <child
+      link="lsec02" />
+    <axis
+      xyz="-0.499999999999977 0.866025403784452 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+  <link
+    name="sec01">
+    <inertial>
+      <origin
+        xyz="-0.0084174 -0.0093979 -4.0643E-05"
+        rpy="0 0 0" />
+      <mass
+        value="1.3179" />
+      <inertia
+        ixx="0.001805"
+        ixy="9.0045E-05"
+        ixz="1.7848E-17"
+        iyy="0.0021902"
+        iyz="-1.0097E-06"
+        izz="0.0015672" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tripod21/meshes/sec01.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.84706 0.84706 0.84706 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tripod21/meshes/sec01.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leg01"
+    type="revolute">
+    <origin
+      xyz="0 0.21763 -0.0010177"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="sec01" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+  <link
+    name="hsec01">
+    <inertial>
+      <origin
+        xyz="0.072239 0.039801 -0.0012117"
+        rpy="0 0 0" />
+      <mass
+        value="3.8354" />
+      <inertia
+        ixx="0.015376"
+        ixy="1.3087E-06"
+        ixz="-7.7287E-06"
+        iyy="0.0030869"
+        iyz="-2.4927E-06"
+        izz="0.012961" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tripod21/meshes/hsec01.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.84706 0.84706 0.84706 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tripod21/meshes/hsec01.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="high01"
+    type="revolute">
+    <origin
+      xyz="-0.0894999999999727 0.0788064380992637 0"
+      rpy="0 0 0" />
+    <parent
+      link="sec01" />
+    <child
+      link="hsec01" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+  <link
+    name="lsec01">
+    <inertial>
+      <origin
+        xyz="0.007375 0.075585 -3.0488E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.2066" />
+      <inertia
+        ixx="0.00061397"
+        ixy="3.0298E-10"
+        ixz="6.3145E-10"
+        iyy="5.0925E-05"
+        iyz="1.1635E-09"
+        izz="0.00058055" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tripod21/meshes/lsec01.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tripod21/meshes/lsec01.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="low01"
+    type="revolute">
+    <origin
+      xyz="0.106550000000021 0.269643561900756 -0.00210000000000009"
+      rpy="0 0 0" />
+    <parent
+      link="hsec01" />
+    <child
+      link="lsec01" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10000"
+      velocity="10000" />
+  </joint>
+
+<!--transmission definition -->
+<transmission name="tran01">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="leg01">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor01">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="tran02">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="high01">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor02">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="tran03">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="low01">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor03">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="tran04">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="leg02">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor04">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="tran05">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="high02">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor05">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="tran06">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="low02">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor06">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="tran07">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="leg03">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor07">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="tran08">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="high03">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor08">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="tran09">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="low03">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor09">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+      <!--cointrol pluging -->
+  <gazebo>
+  <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+
+  </plugin>
+</gazebo>
+
+<!--
+<gazebo reference="sec01">
+   <turnGravityOff>true</turnGravityOff>
+</gazebo>
+
+<gazebo reference="sec02">
+   <turnGravityOff>true</turnGravityOff>
+</gazebo>
+
+<gazebo reference="sec03">
+   <turnGravityOff>true</turnGravityOff>
+</gazebo>
+
+<gazebo reference="hsec01">
+   <turnGravityOff>true</turnGravityOff>
+</gazebo>
+
+<gazebo reference="hsec02">
+   <turnGravityOff>true</turnGravityOff>
+</gazebo>
+
+<gazebo reference="hsec03">
+   <turnGravityOff>true</turnGravityOff>
+</gazebo>
+
+<gazebo reference="lsec01">
+   <turnGravityOff>true</turnGravityOff>
+</gazebo>
+
+<gazebo reference="lsec02">
+   <turnGravityOff>true</turnGravityOff>
+</gazebo>
+
+<gazebo reference="lsec03">
+   <turnGravityOff>true</turnGravityOff>
+</gazebo>
+
+-->
+</robot>
